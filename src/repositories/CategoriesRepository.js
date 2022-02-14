@@ -15,10 +15,10 @@ module.exports = class CategoriesRepository {
   }
 
   findById (id) {
-    return this.categories.find(category => category.id === id)
+    return this.categories.findIndex(category => category.id === id)
   }
 
-  update (category, name) {
-    category.name = name
+  update (categoryIndex, name) {
+    this.categories[categoryIndex].name = name
   }
 }
