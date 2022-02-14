@@ -1,6 +1,7 @@
 const { Router } = require('express')
 const CreateCategoryController = require('../controllers/CreateCategoryController')
 const ListCategoryController = require('../controllers/ListCategoryController')
+const UpdateCategoryController = require('../controllers/UpdateCategoryController')
 const CategoriesRepository = require('../repositories/CategoriesRepository')
 
 const categoriesRoutes = Router()
@@ -10,5 +11,8 @@ categoriesRoutes.post('/', createCategoryController.handle.bind(createCategoryCo
 
 const listCategoryController = new ListCategoryController(categoriesRepository)
 categoriesRoutes.get('/list', listCategoryController.handle.bind(listCategoryController))
+
+const updateCategoryController = new UpdateCategoryController(categoriesRepository)
+categoriesRoutes.put('/:id/update', updateCategoryController.handle.bind(listCategoryController))
 
 module.exports = categoriesRoutes

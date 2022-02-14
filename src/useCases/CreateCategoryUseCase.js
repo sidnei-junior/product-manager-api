@@ -1,4 +1,3 @@
-
 module.exports = class CreateCategoriesUseCase {
   constructor (categoriesRepository) {
     this.categoriesRepository = categoriesRepository

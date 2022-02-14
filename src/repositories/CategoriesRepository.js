@@ -13,4 +13,12 @@ module.exports = class CategoriesRepository {
   list () {
     return this.categories
   }
+
+  findById (id) {
+    return this.categories.find(category => category.id === id)
+  }
+
+  update (category, name) {
+    category.name = name
+  }
 }
