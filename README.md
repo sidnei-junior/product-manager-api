@@ -1,5 +1,6 @@
 # Product Manager API
 
 ## Routes
- >Create Category
- >List Categories
+ 1. Create Category
+ 
+ 2. List Categories
