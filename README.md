@@ -3,4 +3,5 @@
 ## Routes
  1. [C] Create Category
  2. [R] List Categories 
- 3. [U] Update Categories
+ 3. [U] Update Category 
+ 3. [D] Delete Category

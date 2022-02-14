@@ -21,4 +21,8 @@ module.exports = class CategoriesRepository {
   update (categoryIndex, name) {
     this.categories[categoryIndex].name = name
   }
+
+  remove (categoryIndex) {
+    this.categories.splice(categoryIndex, 1)
+  }
 }
